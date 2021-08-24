@@ -1,0 +1,18 @@
+<div class="products-page">
+  <div class="grid">
+    <div class="col-3" *ngIf="!isCategoryPage">
+      <h4>Categories</h4>
+      <div *ngFor="let category of categories" class="p-field-checkbox mt-3">
+        <p-checkbox name="group2" [binary]="trueVal" (onChange)="categoryFilter()" [value]="category"  [(ngModel)]="category.checked" [inputId]="category._id"></p-checkbox>
+        <label [for]="category._id">{{category.name}}</label>
+    </div>
+    </div>
+    <div [ngClass]="{'col-9':!isCategoryPage,'col-12':isCategoryPage}">
+      <div class="grid" *ngIf="products">
+        <div [ngClass]="{'col-4':!isCategoryPage,'col-3':isCategoryPage}" *ngFor="let p of products">
+        <products-product-item [product]="p"></products-product-item>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

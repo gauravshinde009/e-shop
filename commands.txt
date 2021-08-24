@@ -1,0 +1,14 @@
+create workspace and add an app
+npx create-nx-workspace --preset=angular  eg:- name of company
+
+run app within workspace
+nx run <app name>:serve     eg:- eshop
+OR
+nx serve <app name> --port 4100 <any port no of choice>
+
+to add new app in existing workspace
+nx generate @nrwl/angular:app <app name>   eg:-adminPanel
+
+
+to create a new library
+npx nx generate @nrwl/workspace:lib ui --dry-run  //ui is name of library

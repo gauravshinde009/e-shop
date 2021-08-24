@@ -1,0 +1,38 @@
+<div class="order-summary">
+  <h3>Order Summary</h3>
+  <div class="summary-price">
+    <div class="grid" style="width: 100%;">
+      <div class="col-6">
+        <span>Item Price</span>
+      </div>
+      <div class="col-6">
+        <span >{{totalPrice | currency:"INR":"symbol"}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="summary-price">
+    <div class="grid" style="width: 100%;">
+      <div class="col-6">
+        <span>Packing & Shipping</span>
+      </div>
+      <div class="col-6">
+        <span class="free">Free</span>
+      </div>
+    </div>
+  </div>
+  <div class="to-checkout">
+    <div class="summary-price">
+      <div class="grid" style="width: 100%;">
+        <div class="col-6">
+          <span>Total Price</span>
+        </div>
+        <div class="col-6">
+          <span class="free">{{totalPrice | currency:"INR":"symbol"}}</span>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!isCheckout">
+      <p-button styleClass="checkout-button" (onClick)="navigateToCheckout()" label="Checkout"></p-button>
+    </div>
+  </div>
+</div>
