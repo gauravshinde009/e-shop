@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@env/*": ["environment/*"],
+      "@env/*": ["environments/*"],
       "@gaurav-enterprises/orders": ["libs/orders/src/index.ts"],
       "@gaurav-enterprises/products": ["libs/products/src/index.ts"],
       "@gaurav-enterprises/ui": ["libs/ui/src/index.ts"],
